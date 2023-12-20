@@ -19,6 +19,7 @@ public class Foo {
         ObjectInputStream objectInputStream = new ObjectInputStream(Files.newInputStream(path));
         Object deserialized = objectInputStream.readObject();
         System.out.println(deserialized);
+        Files.delete(path);
     }
 
 }
